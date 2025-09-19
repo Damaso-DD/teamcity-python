@@ -13,11 +13,11 @@ def test_get_greeting():
 #    assert get_greeting("Slowpoke") == "Hi, Slowpoke"
 
 
-def test_flaky_greeting():
-    """
-    This is a flaky test. It will randomly fail about 33% of the time.
-    """
-    roll = random.randint(1, 3)
-    assert roll != 1  # Fails if the number is 1
+#def test_flaky_greeting():
+#    """
+#    This is a flaky test. It will randomly fail about 33% of the time.
+#    """
+#    roll = random.randint(1, 3)
+#    assert roll != 1  # Fails if the number is 1
 
 
