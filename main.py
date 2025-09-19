@@ -1,16 +1,9 @@
-# This is a sample Python script.
+#!/usr/bin/env python
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+"""Script entry point."""
 
+from src.main import get_greeting
 
-def get_greeting(name):
-    """Generates a greeting string for the given name."""
-    return f'Hi, {name}'
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print(get_greeting('PyCharm'))
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/

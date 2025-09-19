@@ -1,6 +1,6 @@
 import time
 import random
-from main import get_greeting
+from src.main import get_greeting
 
 def test_get_greeting():
     """Tests the get_greeting function for a standard name."""
