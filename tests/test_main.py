@@ -8,6 +8,6 @@ def test_get_greeting():
 
 def test_slow_greeting_generation():
     """Simulates a slow operation during a test."""
-    time.sleep(15)  # Sleep for 15 seconds
+    time.sleep(180)  # Sleep for 180 seconds
     assert get_greeting("Slowpoke") == "Hi, Slowpoke"
 
