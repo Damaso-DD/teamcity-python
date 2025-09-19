@@ -6,7 +6,7 @@
 
 def get_greeting(name):
     """Generates a greeting string for the given name."""
-    return f'Hi, {name}'
+    return f'Hello, {name}'
 
 
 # Press the green button in the gutter to run the script.
