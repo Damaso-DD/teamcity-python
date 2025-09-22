@@ -1,0 +1,231 @@
+Build 'Teamcity Python / Build' #2, default branch 'main'
+Triggered 2025-09-19 08:35:45 by 'Damaso Sanoja (damasosanoja)'
+Started 2025-09-19 08:36:19 on agent 'Ubuntu-24.04-Small-i-042c3e41c4af64aa7'
+Finished 2025-09-19 08:36:43 with status FAILURE 'Python error: AttributeError; inspections total: 0, errors: 0'
+VCS revisions: 'TeamcityPython_HttpsGithubComDamasoDdTeamcityPythonRefsHeadsMain' (Git, instance id 1): '370ebf3b19ce727f7c9fab7fd263001e58b7ad5b' (branch: 'refs/heads/main')
+TeamCity URL https://damasosanoja.teamcity.com/buildConfiguration/TeamcityPython_Build/2 
+TeamCity server version is  (build 197325), server timezone: UTC
+Log entries are grouped by flowIds, so they might not be fully ordered by timestamps
+
+[08:35:45]E: bt1 (58s)
+[08:35:45]i: TeamCity server version is 2025.07.1 (build 197325)
+[08:35:45] : Collecting changes in 1 VCS root
+[08:35:45]i:	 [Collecting changes in 1 VCS root] The changes collecting operation is running on the node ill-einstein-oydf1d-0-0 (version: 2025.07.1 (build 197325))
+[08:35:45] :	 [Collecting changes in 1 VCS root] VCS Root details
+[08:35:45] :		 [VCS Root details] "https://github.com/Damaso-DD/teamcity-python#refs/heads/main" {instance id=1, parent internal id=1, parent id=TeamcityPython_HttpsGithubComDamasoDdTeamcityPythonRefsHeadsMain, description: "https://github.com/Damaso-DD/teamcity-python#refs/heads/main"}
+[08:35:45]i:	 [Collecting changes in 1 VCS root] Loading current repository state for VCS root 'https://github.com/Damaso-DD/teamcity-python#refs/heads/main'
+[08:35:45]i:		 [Loading current repository state for VCS root 'https://github.com/Damaso-DD/teamcity-python#refs/heads/main'] VCS root 'https://github.com/Damaso-DD/teamcity-python#refs/heads/main': git -c core.askpass=/opt/teamcity/temp/pass15424890889358670949 -c credential.helper= -c credential.helper=/opt/teamcity/temp/credHelper1767301612082986370.sh ls-remote origin
+[08:35:45]i:	 [Collecting changes in 1 VCS root] Detecting changes in VCS root 'https://github.com/Damaso-DD/teamcity-python#refs/heads/main' (used in 'Build')
+[08:35:45]i:	 [Collecting changes in 1 VCS root] Will collect changes for 'https://github.com/Damaso-DD/teamcity-python#refs/heads/main' starting from revision 370ebf3b19ce727f7c9fab7fd263001e58b7ad5b
+[08:35:45] : Finalize build settings
+[08:35:45] : Compute revision for 'https://github.com/Damaso-DD/teamcity-python#refs/heads/main'
+[08:35:45] :	 [Compute revision for 'https://github.com/Damaso-DD/teamcity-python#refs/heads/main'] Upper limit revision: 370ebf3b19ce727f7c9fab7fd263001e58b7ad5b
+[08:35:45]i:	 [Compute revision for 'https://github.com/Damaso-DD/teamcity-python#refs/heads/main'] MaxModId = null
+[08:35:45] :	 [Compute revision for 'https://github.com/Damaso-DD/teamcity-python#refs/heads/main'] Cannot find modification in TeamCity database with revision 370ebf3b19ce727f7c9fab7fd263001e58b7ad5b
+[08:35:45] :	 [Compute revision for 'https://github.com/Damaso-DD/teamcity-python#refs/heads/main'] Computed revision: 370ebf3b19ce727f7c9fab7fd263001e58b7ad5b
+[08:36:19] : The build is removed from the queue to be prepared for the start
+[08:36:19] : Starting the build on the agent "Ubuntu-24.04-Small-i-042c3e41c4af64aa7"
+[08:36:20]i: Agent time zone: Etc/UTC
+[08:36:20]i: Agent is running under JRE: 21.0.8+9-LTS
+[08:36:20] : Updating tools for build
+[08:36:20] :	 [Updating tools for build] Tools are not required for the build
+[08:36:20] : Clearing temporary directory: /mnt/agent/temp/buildTmp
+[08:36:20]i: Artifacts cache is not available, cache publishing will be skipped
+[08:36:20]i: Preparing performance monitoring data directory: /home/teamcity/agent/system/perfmon
+[08:36:20]i: Performance monitor is using command line: [perl, /home/teamcity/agent/system/perfmon/scripts/vmstatlinux.pl, /home/teamcity/agent/system/perfmon/temp/2/perfmon.csv, 1000]
+[08:36:20]i: Starting performance monitoring process
+[08:36:20]i: Performance monitoring process started
+[08:36:21] : Publishing internal artifacts
+[08:36:21] :	 [Publishing internal artifacts] Publishing 1 file using [WebPublisher]
+[08:36:21] :	 [Publishing internal artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]
+[08:36:21]i:	 [Publishing internal artifacts] Will publish 1 artifact(s) to TeamCity node with id ill-einstein-oydf1d-0-0
+[08:36:22] : Full checkout enforced. Reason: [Checkout directory is empty or doesn't exist]
+[08:36:22] : Will perform clean checkout. Reason: Checkout directory is empty or doesn't exist
+[08:36:22] : Checkout directory: /mnt/agent/work/e82fbf5d5a572ae7
+[08:36:22] : Updating sources: auto checkout (on agent) (4s)
+[08:36:22] :	 [Updating sources] Will use agent side checkout
+[08:36:22] :	 [Updating sources] VCS Root: https://github.com/Damaso-DD/teamcity-python#refs/heads/main (4s)
+[08:36:22] :		 [VCS Root: https://github.com/Damaso-DD/teamcity-python#refs/heads/main] revision: 370ebf3b19ce727f7c9fab7fd263001e58b7ad5b
+[08:36:22] :		 [VCS Root: https://github.com/Damaso-DD/teamcity-python#refs/heads/main] Shallow clone automatically enabled on a short-lived agent
+[08:36:22] :		 [VCS Root: https://github.com/Damaso-DD/teamcity-python#refs/heads/main] Git version: 2.47.1.0
+[08:36:22] :		 [VCS Root: https://github.com/Damaso-DD/teamcity-python#refs/heads/main] Update checkout directory (/mnt/agent/work/e82fbf5d5a572ae7) (4s)
+[08:36:22] :			 [Update checkout directory (/mnt/agent/work/e82fbf5d5a572ae7)] The .git directory is missing in '/mnt/agent/work/e82fbf5d5a572ae7'. Running 'git init'...
+[08:36:22] :			 [Update checkout directory (/mnt/agent/work/e82fbf5d5a572ae7)] /usr/local/bin/git init --initial-branch=main
+[08:36:25] :			 [Update checkout directory (/mnt/agent/work/e82fbf5d5a572ae7)] /usr/local/bin/git config core.sparseCheckout true
+[08:36:25] :			 [Update checkout directory (/mnt/agent/work/e82fbf5d5a572ae7)] /usr/local/bin/git config http.sslCAInfo
+[08:36:25] :			 [Update checkout directory (/mnt/agent/work/e82fbf5d5a572ae7)] /usr/local/bin/git show-ref
+[08:36:25] :			 [Update checkout directory (/mnt/agent/work/e82fbf5d5a572ae7)] /usr/local/bin/git log -n1 --pretty=format:%H%x20%s 370ebf3b19ce727f7c9fab7fd263001e58b7ad5b --
+[08:36:25]i:			 [Update checkout directory (/mnt/agent/work/e82fbf5d5a572ae7)] fatal: bad object 370ebf3b19ce727f7c9fab7fd263001e58b7ad5b
+[08:36:25] :			 [Update checkout directory (/mnt/agent/work/e82fbf5d5a572ae7)] /usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass10757622755090774696 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper13718987544079809787.sh ls-remote origin
+[08:36:26] :			 [Update checkout directory (/mnt/agent/work/e82fbf5d5a572ae7)] /usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Enumerating objects: 12, done.        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Counting objects:   8% (1/12)        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Counting objects:  16% (2/12)        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Counting objects:  25% (3/12)        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Counting objects:  33% (4/12)        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Counting objects:  41% (5/12)        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Counting objects:  50% (6/12)        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Counting objects:  58% (7/12)        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Counting objects:  66% (8/12)        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Counting objects:  75% (9/12)        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Counting objects:  83% (10/12)        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Counting objects:  91% (11/12)        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Counting objects: 100% (12/12)        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Counting objects: 100% (12/12), done.        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Compressing objects:  12% (1/8)        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Compressing objects:  25% (2/8)        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Compressing objects:  37% (3/8)        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Compressing objects:  50% (4/8)        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Compressing objects:  62% (5/8)        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Compressing objects:  75% (6/8)        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Compressing objects:  87% (7/8)        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Compressing objects: 100% (8/8)        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Compressing objects: 100% (8/8), done.        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] remote: Total 12 (delta 0), reused 10 (delta 0), pack-reused 0 (from 0)        
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main] From https://github.com/Damaso-DD/teamcity-python
+[08:36:26]i:				 [/usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3905861034436376816 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper4428990624504050202.sh fetch --progress --depth=1 --recurse-submodules=no origin +370ebf3b19ce727f7c9fab7fd263001e58b7ad5b:refs/remotes/origin/main]  * [new ref]         370ebf3b19ce727f7c9fab7fd263001e58b7ad5b -> origin/main
+[08:36:26] :			 [Update checkout directory (/mnt/agent/work/e82fbf5d5a572ae7)] /usr/local/bin/git log -n1 --pretty=format:%H%x20%s 370ebf3b19ce727f7c9fab7fd263001e58b7ad5b --
+[08:36:26] :			 [Update checkout directory (/mnt/agent/work/e82fbf5d5a572ae7)] /usr/local/bin/git branch
+[08:36:26] :			 [Update checkout directory (/mnt/agent/work/e82fbf5d5a572ae7)] /usr/local/bin/git branch --create-reflog --track main refs/remotes/origin/main
+[08:36:26] :			 [Update checkout directory (/mnt/agent/work/e82fbf5d5a572ae7)] /usr/local/bin/git update-ref refs/heads/main 370ebf3b19ce727f7c9fab7fd263001e58b7ad5b
+[08:36:26] :			 [Update checkout directory (/mnt/agent/work/e82fbf5d5a572ae7)] /usr/local/bin/git -c core.askpass=/mnt/agent/temp/buildTmp/pass3733523433407478433 -c credential.helper= -c credential.helper=/mnt/agent/temp/buildTmp/credHelper9328823449819382119.sh checkout -q -f main
+[08:36:26] :			 [Update checkout directory (/mnt/agent/work/e82fbf5d5a572ae7)] Cleaning https://github.com/Damaso-DD/teamcity-python#refs/heads/main in /mnt/agent/work/e82fbf5d5a572ae7 the file set ALL_UNTRACKED
+[08:36:26] :			 [Update checkout directory (/mnt/agent/work/e82fbf5d5a572ae7)] /usr/local/bin/git clean -f -d -x
+[08:36:27] : Build preparation done
+[08:36:27]E: Step 1/2: Python (8s)
+[08:36:27]i:	 [Step 1/2] Using Python executable detected
+[08:36:27] :	 [Step 1/2] Starting: sh /mnt/agent/temp/buildTmp/script_1758285387211_e21763f6-681c-40de-b785-f928edb4dc8d}16350188813823256048.sh
+[08:36:27] :	 [Step 1/2] in directory: /mnt/agent/work/e82fbf5d5a572ae7
+[08:36:27] :	 [Step 1/2] Create Venv environment (4s)
+[08:36:27]i:		 [Create Venv environment] Process started
+[08:36:27]i:		 [Create Venv environment] # Generated script file
+[08:36:27]i:		 [Create Venv environment] cat "/mnt/agent/temp/buildTmp/script_1758285387211_e21763f6-681c-40de-b785-f928edb4dc8d}16350188813823256048.sh"
+[08:36:27]i:		 [Create Venv environment] # TeamCity Message: Python command
+[08:36:27] :		 [Create Venv environment] /usr/bin/python3 -m venv .venv
+[08:36:31] :		 [Create Venv environment] Process successfully exited with code 0
+[08:36:31] :	 [Step 1/2] Process exited with code 0
+[08:36:31] :	 [Step 1/2] Starting: sh /mnt/agent/temp/buildTmp/script_1758285387252_9703714a-bf83-48ee-988b-8e464a2143b9}4497736566523794049.sh
+[08:36:31] :	 [Step 1/2] in directory: /mnt/agent/work/e82fbf5d5a572ae7
+[08:36:31] :	 [Step 1/2] Install dependencies in Venv (2s)
+[08:36:31]i:		 [Install dependencies in Venv] Process started
+[08:36:31]i:		 [Install dependencies in Venv] # Generated script file
+[08:36:31]i:		 [Install dependencies in Venv] cat "/mnt/agent/temp/buildTmp/script_1758285387252_9703714a-bf83-48ee-988b-8e464a2143b9}4497736566523794049.sh"
+[08:36:31]i:		 [Install dependencies in Venv] . "./.venv/bin/activate"
+[08:36:31]i:		 [Install dependencies in Venv] # TeamCity Message: Python command
+[08:36:31] :		 [Install dependencies in Venv] python -m pip install -r "requirements.txt"
+[08:36:32] :		 [Install dependencies in Venv] Collecting pytest==6.1.2 (from -r requirements.txt (line 1))
+[08:36:32] :		 [Install dependencies in Venv]   Downloading pytest-6.1.2-py3-none-any.whl.metadata (7.3 kB)
+[08:36:32] :		 [Install dependencies in Venv] Collecting flake8==3.8.4 (from -r requirements.txt (line 2))
+[08:36:32] :		 [Install dependencies in Venv]   Downloading flake8-3.8.4-py2.py3-none-any.whl.metadata (3.7 kB)
+[08:36:32] :		 [Install dependencies in Venv] Collecting attrs>=17.4.0 (from pytest==6.1.2->-r requirements.txt (line 1))
+[08:36:32] :		 [Install dependencies in Venv]   Downloading attrs-25.3.0-py3-none-any.whl.metadata (10 kB)
+[08:36:32] :		 [Install dependencies in Venv] Collecting iniconfig (from pytest==6.1.2->-r requirements.txt (line 1))
+[08:36:32] :		 [Install dependencies in Venv]   Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+[08:36:32] :		 [Install dependencies in Venv] Collecting packaging (from pytest==6.1.2->-r requirements.txt (line 1))
+[08:36:32] :		 [Install dependencies in Venv]   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+[08:36:32] :		 [Install dependencies in Venv] Collecting pluggy<1.0,>=0.12 (from pytest==6.1.2->-r requirements.txt (line 1))
+[08:36:32] :		 [Install dependencies in Venv]   Downloading pluggy-0.13.1-py2.py3-none-any.whl.metadata (15 kB)
+[08:36:32] :		 [Install dependencies in Venv] Collecting py>=1.8.2 (from pytest==6.1.2->-r requirements.txt (line 1))
+[08:36:32] :		 [Install dependencies in Venv]   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+[08:36:32] :		 [Install dependencies in Venv] Collecting toml (from pytest==6.1.2->-r requirements.txt (line 1))
+[08:36:32] :		 [Install dependencies in Venv]   Downloading toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+[08:36:32] :		 [Install dependencies in Venv] Collecting pyflakes<2.3.0,>=2.2.0 (from flake8==3.8.4->-r requirements.txt (line 2))
+[08:36:32] :		 [Install dependencies in Venv]   Downloading pyflakes-2.2.0-py2.py3-none-any.whl.metadata (3.9 kB)
+[08:36:32] :		 [Install dependencies in Venv] Collecting pycodestyle<2.7.0,>=2.6.0a1 (from flake8==3.8.4->-r requirements.txt (line 2))
+[08:36:32] :		 [Install dependencies in Venv]   Downloading pycodestyle-2.6.0-py2.py3-none-any.whl.metadata (30 kB)
+[08:36:32] :		 [Install dependencies in Venv] Collecting mccabe<0.7.0,>=0.6.0 (from flake8==3.8.4->-r requirements.txt (line 2))
+[08:36:32] :		 [Install dependencies in Venv]   Downloading mccabe-0.6.1-py2.py3-none-any.whl.metadata (4.3 kB)
+[08:36:33] :		 [Install dependencies in Venv] Downloading pytest-6.1.2-py3-none-any.whl (272 kB)
+[08:36:33] :		 [Install dependencies in Venv]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 272.4/272.4 kB 21.7 MB/s eta 0:00:00
+[08:36:33] :		 [Install dependencies in Venv] Downloading flake8-3.8.4-py2.py3-none-any.whl (72 kB)
+[08:36:33] :		 [Install dependencies in Venv]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.9/72.9 kB 7.9 MB/s eta 0:00:00
+[08:36:33] :		 [Install dependencies in Venv] Downloading attrs-25.3.0-py3-none-any.whl (63 kB)
+[08:36:33] :		 [Install dependencies in Venv]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.8/63.8 kB 6.8 MB/s eta 0:00:00
+[08:36:33] :		 [Install dependencies in Venv] Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+[08:36:33] :		 [Install dependencies in Venv] Downloading pluggy-0.13.1-py2.py3-none-any.whl (18 kB)
+[08:36:33] :		 [Install dependencies in Venv] Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+[08:36:33] :		 [Install dependencies in Venv]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 10.6 MB/s eta 0:00:00
+[08:36:33] :		 [Install dependencies in Venv] Downloading pycodestyle-2.6.0-py2.py3-none-any.whl (41 kB)
+[08:36:33] :		 [Install dependencies in Venv]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.4/41.4 kB 4.0 MB/s eta 0:00:00
+[08:36:33] :		 [Install dependencies in Venv] Downloading pyflakes-2.2.0-py2.py3-none-any.whl (66 kB)
+[08:36:33] :		 [Install dependencies in Venv]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.0/67.0 kB 6.9 MB/s eta 0:00:00
+[08:36:33] :		 [Install dependencies in Venv] Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+[08:36:33] :		 [Install dependencies in Venv] Downloading packaging-25.0-py3-none-any.whl (66 kB)
+[08:36:33] :		 [Install dependencies in Venv]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 7.1 MB/s eta 0:00:00
+[08:36:33] :		 [Install dependencies in Venv] Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+[08:36:33] :		 [Install dependencies in Venv] Installing collected packages: mccabe, toml, pyflakes, pycodestyle, py, pluggy, packaging, iniconfig, attrs, pytest, flake8
+[08:36:33] :		 [Install dependencies in Venv] Successfully installed attrs-25.3.0 flake8-3.8.4 iniconfig-2.1.0 mccabe-0.6.1 packaging-25.0 pluggy-0.13.1 py-1.11.0 pycodestyle-2.6.0 pyflakes-2.2.0 pytest-6.1.2 toml-0.10.2
+[08:36:33] :		 [Install dependencies in Venv] Process successfully exited with code 0
+[08:36:33] :	 [Step 1/2] Process exited with code 0
+[08:36:33] :	 [Step 1/2] Starting: sh /mnt/agent/temp/buildTmp/script_1758285387255_5687c145-ffcf-49f8-8c7c-22c8eb708451}10520753578269968623.sh
+[08:36:33] :	 [Step 1/2] in directory: /mnt/agent/work/e82fbf5d5a572ae7
+[08:36:33] :	 [Step 1/2] Install command tool package
+[08:36:33]i:		 [Install command tool package] Process started
+[08:36:33]i:		 [Install command tool package] # Generated script file
+[08:36:33]i:		 [Install command tool package] cat "/mnt/agent/temp/buildTmp/script_1758285387255_5687c145-ffcf-49f8-8c7c-22c8eb708451}10520753578269968623.sh"
+[08:36:33]i:		 [Install command tool package] . "./.venv/bin/activate"
+[08:36:33]i:		 [Install command tool package] # TeamCity Message: Python command
+[08:36:33] :		 [Install command tool package] python -m pip install flake8
+[08:36:34] :		 [Install command tool package] Requirement already satisfied: flake8 in ./.venv/lib/python3.12/site-packages (3.8.4)
+[08:36:34] :		 [Install command tool package] Requirement already satisfied: pyflakes<2.3.0,>=2.2.0 in ./.venv/lib/python3.12/site-packages (from flake8) (2.2.0)
+[08:36:34] :		 [Install command tool package] Requirement already satisfied: pycodestyle<2.7.0,>=2.6.0a1 in ./.venv/lib/python3.12/site-packages (from flake8) (2.6.0)
+[08:36:34] :		 [Install command tool package] Requirement already satisfied: mccabe<0.7.0,>=0.6.0 in ./.venv/lib/python3.12/site-packages (from flake8) (0.6.1)
+[08:36:34] :		 [Install command tool package] Process successfully exited with code 0
+[08:36:34] :	 [Step 1/2] Process exited with code 0
+[08:36:34] :	 [Step 1/2] Starting: sh /mnt/agent/temp/buildTmp/script_1758285387257_af480054-a32a-420d-844a-862c7a231b31}1821454053787654097.sh
+[08:36:34] :	 [Step 1/2] in directory: /mnt/agent/work/e82fbf5d5a572ae7
+[08:36:34]E:	 [Step 1/2] Python run in Venv
+[08:36:34]i:		 [Python run in Venv] Process started
+[08:36:34]i:		 [Python run in Venv] # Generated script file
+[08:36:34]i:		 [Python run in Venv] cat "/mnt/agent/temp/buildTmp/script_1758285387257_af480054-a32a-420d-844a-862c7a231b31}1821454053787654097.sh"
+[08:36:34]i:		 [Python run in Venv] . "./.venv/bin/activate"
+[08:36:34]i:		 [Python run in Venv] # TeamCity Message: Python command
+[08:36:34] :		 [Python run in Venv] python -m flake8 --exit-zero --output-file=/mnt/agent/temp/buildTmp/flake_output.txt --format='flakeReport:::%(path)s:::%(row)d:::%(code)s:%(text)s' src/anewtodolist
+[08:36:35]W:		 [Python run in Venv] Traceback (most recent call last):
+[08:36:35]W:		 [Python run in Venv]   File "<frozen runpy>", line 198, in _run_module_as_main
+[08:36:35]W:		 [Python run in Venv]   File "<frozen runpy>", line 88, in _run_code
+[08:36:35]W:		 [Python run in Venv]   File "/mnt/agent/work/e82fbf5d5a572ae7/.venv/lib/python3.12/site-packages/flake8/__main__.py", line 4, in <module>
+[08:36:35]W:		 [Python run in Venv]     cli.main()
+[08:36:35]W:		 [Python run in Venv]   File "/mnt/agent/work/e82fbf5d5a572ae7/.venv/lib/python3.12/site-packages/flake8/main/cli.py", line 22, in main
+[08:36:35]W:		 [Python run in Venv]     app.run(argv)
+[08:36:35]W:		 [Python run in Venv]   File "/mnt/agent/work/e82fbf5d5a572ae7/.venv/lib/python3.12/site-packages/flake8/main/application.py", line 363, in run
+[08:36:35]W:		 [Python run in Venv]     self._run(argv)
+[08:36:35]W:		 [Python run in Venv]   File "/mnt/agent/work/e82fbf5d5a572ae7/.venv/lib/python3.12/site-packages/flake8/main/application.py", line 350, in _run
+[08:36:35]W:		 [Python run in Venv]     self.initialize(argv)
+[08:36:35]W:		 [Python run in Venv]   File "/mnt/agent/work/e82fbf5d5a572ae7/.venv/lib/python3.12/site-packages/flake8/main/application.py", line 330, in initialize
+[08:36:35]W:		 [Python run in Venv]     self.find_plugins(config_finder)
+[08:36:35]W:		 [Python run in Venv]   File "/mnt/agent/work/e82fbf5d5a572ae7/.venv/lib/python3.12/site-packages/flake8/main/application.py", line 153, in find_plugins
+[08:36:35]W:		 [Python run in Venv]     self.check_plugins = plugin_manager.Checkers(local_plugins.extension)
+[08:36:35]W:		 [Python run in Venv]                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[08:36:35]W:		 [Python run in Venv]   File "/mnt/agent/work/e82fbf5d5a572ae7/.venv/lib/python3.12/site-packages/flake8/plugins/manager.py", line 356, in __init__
+[08:36:35]W:		 [Python run in Venv]     self.manager = PluginManager(
+[08:36:35]W:		 [Python run in Venv]                    ^^^^^^^^^^^^^^
+[08:36:35]W:		 [Python run in Venv]   File "/mnt/agent/work/e82fbf5d5a572ae7/.venv/lib/python3.12/site-packages/flake8/plugins/manager.py", line 238, in __init__
+[08:36:35]W:		 [Python run in Venv]     self._load_entrypoint_plugins()
+[08:36:35]W:		 [Python run in Venv]   File "/mnt/agent/work/e82fbf5d5a572ae7/.venv/lib/python3.12/site-packages/flake8/plugins/manager.py", line 254, in _load_entrypoint_plugins
+[08:36:35]W:		 [Python run in Venv]     eps = importlib_metadata.entry_points().get(self.namespace, ())
+[08:36:35]W:		 [Python run in Venv]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[08:36:35]W:		 [Python run in Venv] AttributeError: 'EntryPoints' object has no attribute 'get'
+[08:36:35]E:		 [Python run in Venv] Process failed with code 1
+[08:36:35]W:	 [Step 1/2] Process exited with code 1
+[08:36:35]W:	 [Step 1/2] Flake8 report file is not found
+[08:36:35]E:	 [Step 1/2] Python error: AttributeError
+[08:36:35]E:	 [Step 1/2] Step Python failed
+[08:36:35]W: Step 2/2: Python
+[08:36:35]W:	 [Step 2/2] Build step Python is skipped because the previous step has failed
+[08:36:35]i: Stopping performance monitoring process
+[08:36:40]i: Performance monitoring process stopped
+[08:36:40]i: Publishing performance monitoring build stages data
+[08:36:40] : Publishing artifacts
+[08:36:40] :	 [Publishing artifacts] Collecting files to publish: [/home/teamcity/agent/system/perfmon/temp/2/perfmon.csv=>.teamcity/perfmon/, /mnt/agent/temp/agentTmp/build_stages.txt=>.teamcity/perfmon/]
+[08:36:40] :	 [Publishing artifacts] Publishing 2 files using [WebPublisher]: /home/teamcity/agent/system/perfmon/temp/2/perfmon.csv, /mnt/agent/temp/agentTmp/build_stages.txt => .teamcity/perfmon
+[08:36:40] :	 [Publishing artifacts] Publishing 2 files using [ArtifactsCachePublisherImpl]: /home/teamcity/agent/system/perfmon/temp/2/perfmon.csv, /mnt/agent/temp/agentTmp/build_stages.txt => .teamcity/perfmon
+[08:36:40]i:	 [Publishing artifacts] Will publish 2 artifact(s) to TeamCity node with id ill-einstein-oydf1d-0-0
+[08:36:40] : Publishing internal artifacts
+[08:36:40] :	 [Publishing internal artifacts] Publishing 1 file using [WebPublisher]
+[08:36:40] :	 [Publishing internal artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]
+[08:36:40]i:	 [Publishing internal artifacts] Will publish 1 artifact(s) to TeamCity node with id ill-einstein-oydf1d-0-0
+[08:36:42] : Publishing internal artifacts
+[08:36:43] : Calculating inspections statistics comparing to the build with id 1...
+[08:36:43] : Total: 0 (+0 -0) Errors: 0 (+0 -0)
+[08:36:43] : Build finished
